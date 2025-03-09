@@ -1,25 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #2a2a2a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary-blue: #1e40af;
+  --primary-blue-light: #3b82f6;
+  --primary-blue-dark: #1e3a8a;
+  --accent-yellow: #eab308;
+  --accent-yellow-light: #fcd34d;
+  --accent-yellow-dark: #ca8a04;
+  --text-dark: #1e293b;
+  --text-light: #f8fafc;
+  --bg-light: #f8fafc;
+  --bg-dark: #0f172a;
+  --transition-speed: 0.3s;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #8bb9fe;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #a4c8ff;
 }
 
 body {
@@ -28,6 +43,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #333333;
+  color: white;
 }
 
 h1 {
@@ -56,8 +73,8 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #f0f0f0;
+    background-color: #181717;
   }
   a:hover {
     color: #747bff;
@@ -65,4 +82,29 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Custom scrollbar for webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #4a4a4a;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #eab308;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ca8a04; 
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #eab308 #4a4a4a;
 }
