@@ -1,12 +1,42 @@
-# React + Vite
+# Prize Picker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for randomly assigning prizes to participants. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add participant names
+- Add available prizes
+- Random prize assignment
+- No duplicate prize assignments
+- Responsive design
+- Clean, modern UI
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/prize-picker.git
+```
+
+2. Install dependencies:
+```bash
+cd prize-picker
+npm install
+```
+
+3. Run the development server:
+```bash
+npm run dev
+```
+
+4. Build for production:
+```bash
+npm run build
+```
+
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+- JavaScript ES6+
