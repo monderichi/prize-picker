@@ -1,40 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #2a2a2a;
+  /* Colors from asfalistesnde.gr */
+  --primary-blue: #0a2156; /* Dark blue */
+  --primary-blue-light: #1e5fac; /* Medium blue */
+  --primary-blue-lighter: #3498db; /* Light blue */
+  --accent-color: #f5b200; /* Gold accent */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --bg-light: #f9f9f9;
+  --bg-lighter: #ffffff;
+  --bg-dark: #0a2156;
+  --transition-speed: 0.3s;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  color-scheme: light;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --primary-blue: #1e40af;
-  --primary-blue-light: #3b82f6;
-  --primary-blue-dark: #1e3a8a;
-  --accent-yellow: #eab308;
-  --accent-yellow-light: #fcd34d;
-  --accent-yellow-dark: #ca8a04;
-  --text-dark: #1e293b;
-  --text-light: #f8fafc;
-  --bg-light: #f8fafc;
-  --bg-dark: #0f172a;
-  --transition-speed: 0.3s;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-a {
-  font-weight: 500;
-  color: #8bb9fe;
-  text-decoration: inherit;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-a:hover {
-  color: #a4c8ff;
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,45 +44,55 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #333333;
-  color: white;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Open Sans', system-ui, sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--primary-blue);
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-blue-light);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--primary-blue-lighter);
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-family: 'Open Sans', system-ui, sans-serif;
+  font-weight: 500;
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  transition: all var(--transition-speed);
+  border: none;
+  box-shadow: var(--shadow-sm);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #f0f0f0;
-    background-color: #181717;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background-color: var(--primary-blue-light);
+}
+
+input, textarea, select {
+  font-family: 'Open Sans', system-ui, sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.5rem;
+  transition: all var(--transition-speed);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-blue-light);
+  box-shadow: 0 0 0 2px rgba(30, 95, 172, 0.2);
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -90,21 +101,56 @@ button:focus-visible {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #4a4a4a;
+  background: #e0e0e0;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #eab308;
+  background: var(--primary-blue-light);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #ca8a04; 
+  background: var(--primary-blue);
 }
 
 /* For Firefox */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #eab308 #4a4a4a;
+  scrollbar-color: var(--primary-blue-light) #e0e0e0;
+}
+
+/* Utility classes */
+.text-primary {
+  color: var(--primary-blue);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+}
+
+.shadow-hover {
+  transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Add these to your index.css file */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
 }
